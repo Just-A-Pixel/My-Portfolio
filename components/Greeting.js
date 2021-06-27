@@ -5,7 +5,11 @@ import styles from "../styles/Greeting.module.css";
 function Greeting() {
   return (
     <div>
-      <div className={styles.heading1}>
+      <motion.div
+        className={styles.heading1}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         Hello
         <motion.div
           style={{ display: "inline-block" }}
@@ -15,7 +19,7 @@ function Greeting() {
         >
           .
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.h5
         className={styles.subheading}
@@ -26,7 +30,13 @@ function Greeting() {
         {" "}
         WELCOME TO MY
       </motion.h5>
-      <h1 className={styles.heading2}>World</h1>
+      <motion.h1
+        className={styles.heading2}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        World
+      </motion.h1>
     </div>
   );
 }

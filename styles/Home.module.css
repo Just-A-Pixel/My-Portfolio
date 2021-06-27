@@ -1,4 +1,6 @@
 
+
+
 .container {
   height: 100%;
   width: 100%;
@@ -6,7 +8,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #72E0ED;
+  background-color: #40D9EA;
   color: #F9F9F9;
   position: absolute;
 }
@@ -32,7 +34,14 @@
   letter-spacing: 100px;
   transition: 300ms;
 }
-
+.circle {
+  position: absolute;
+  background-color: #F9F9F9;
+  height: 0px;
+  width: 0px;
+  border-radius: 100%;
+  z-index: 100;
+}
 @media only screen and (max-width: 600px) {
   .hide {
     display: none;

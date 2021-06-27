@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-    <div className={styles.container} style={{overflowX:'hidden'}}>
+    <div className={styles.container} style={{overflowX:'hidden', overflowY: 'hidden'}}>
       <Greeting />
       
       <AnimatePresence>
@@ -47,12 +47,13 @@ export default function Home() {
 
       <h5 className={img == open ? styles.title : styles.hide}>ENTER</h5>
 
-      
-    </div>
-    <div style={exit?{position: 'absolute', width: '100vw', height: '100vw', zIndex: 100, bottom: '0', left: '0', background: 'white', transition: '1000ms', borderTopRightRadius: '80%' }:{position: 'absolute',width: '0%', height: '0vw', transition: '1000ms', background: 'white'}}>      </div>
-{/* <div style={!exit?{position: 'absolute', width: '100px', height: '100px', zIndex: 100, top: 0}:{ width: '100vw', height: '1000vw', background: 'white', transition: '100ms'}}>        </div>
+      {/* transition */}
+<div className={styles.circle} style={exit?{height:'1000px', width: '1000px', transform: "scale(2, 2)", transition: '700ms'}:{}}>
 
-    </> */}
+</div>
+    </div>
+  
+
     </>
     
   );

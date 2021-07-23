@@ -50,13 +50,15 @@ function test() {
           </motion.h1>
         </div>
 
-        <div className={styles.titleRight}>
+        <motion.div className={styles.titleRight}
+        initial={{backgroundPosition:'10px'}}
+        >
           <div className={styles.innerContainer}>
             <h1 className={styles.rightText}>AND</h1>
             <h1 className={styles.rightText}>A </h1>
             <h1 className={styles.rightText}>DEVELOPER</h1>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

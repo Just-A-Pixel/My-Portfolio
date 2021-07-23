@@ -33,10 +33,11 @@
 }
 
 .titleRight {
-    background-color: #40D9EA;
+    /* background-color: #40D9EA; */
     /* transform: skewY(20deg); */
     width: 115vh;
     clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
+    background-image: url('../public/ellipse');
     
 }
 

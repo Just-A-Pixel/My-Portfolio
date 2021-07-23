@@ -3,10 +3,11 @@ import Greeting from "../components/Greeting";
 import styles from "../styles/Home.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { route } from "next/dist/next-server/server/router";
+import Head from "next/head";
 
 let close = "/DoorClose.svg";
 let open = "/DoorOpen2.svg";
+
 export default function Home() {
   const [img, setImg] = useState(close);
   const [exit, setExit] = useState(false);
@@ -17,44 +18,57 @@ export default function Home() {
   };
 
   const pageTransition = () => {
-    setExit(true)
+    setExit(true);
 
-    setTimeout(function() {
-      router.push("/test")
+    setTimeout(function () {
+      router.push("/about", "/");
     }, 1000);
-  }
+  };
 
   return (
     <>
-    <div className={styles.container} style={{overflowX:'hidden', overflowY: 'hidden'}}>
-      <Greeting />
-      
-      <AnimatePresence>
-        <motion.img
-          className={styles.door}
-          src={img}
-          height={300}
-          width={300}
-          onMouseOver={() => openDoor()}
-          onMouseLeave={() => setImg(close)}
-          onClick={() => pageTransition()}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.2 }}
-          exit={{opacity: 0}}
-        />
-      </AnimatePresence>
+      <Head>
+        <title>Raj Anand</title>
+      </Head>
+      <div
+        className={styles.container}
+        style={{ overflowX: "hidden", overflowY: "hidden" }}
+      >
+        <Greeting />
 
-      <h5 className={img == open ? styles.title : styles.hide}>ENTER</h5>
+        <AnimatePresence>
+          <motion.img
+            className={styles.door}
+            src={img}
+            height={300}
+            width={300}
+            onMouseOver={() => openDoor()}
+            onMouseLeave={() => setImg(close)}
+            onClick={() => pageTransition()}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.2 }}
+            exit={{ opacity: 0 }}
+          />
+        </AnimatePresence>
 
-      {/* transition */}
-<div className={styles.circle} style={exit?{height:'1000px', width: '1000px', transform: "scale(2, 2)", transition: '700ms'}:{}}>
+        <h5 className={img == open ? styles.title : styles.hide}>ENTER</h5>
 
-</div>
-    </div>
-  
-
+        {/* transition */}
+        <div
+          className={styles.circle}
+          style={
+            exit
+              ? {
+                  height: "1000px",
+                  width: "1000px",
+                  transform: "scale(2, 2)",
+                  transition: "800ms",
+                }
+              : {}
+          }
+        ></div>
+      </div>
     </>
-    
   );
 }

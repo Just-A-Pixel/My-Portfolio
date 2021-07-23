@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { ThemeProvider } from "styled-components"
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {

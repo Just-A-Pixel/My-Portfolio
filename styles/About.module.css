@@ -38,7 +38,9 @@
     width: 115vh;
     clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
     background-image: url('../public/ellipse');
-    
+    background-repeat: no-repeat;
+    /* filter: hue-rotate(-30deg); */
+
 }
 
 .rightText{
@@ -47,6 +49,7 @@
     margin: auto;
     margin-top: 38px;
     font-weight: 400;
+    color: #f9f9f9;
 }
 
 .leftText {

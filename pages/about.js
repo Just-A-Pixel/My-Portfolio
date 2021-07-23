@@ -51,8 +51,9 @@ function test() {
         </div>
 
         <motion.div className={styles.titleRight}
-        initial={{backgroundPosition:'10px '}}
-        style={{visibility:'hidden'}}
+        initial={{backgroundPosition:'1000px ', filter:'hue-rotate(-50deg)'}}
+        animate={{backgroundPosition:'-100px',filter:'hue-rotate(0deg)'}}
+        transition={{delay: 1, duration: 1.8}}
         >
           <div className={styles.innerContainer}>
             <h1 className={styles.rightText}>AND</h1>

@@ -50,7 +50,7 @@ function test() {
           </motion.h1>
         </div>
 
-        <div className={styles.titleRight} style={{visibility:'hidden'}}>
+        <div className={styles.titleRight}>
           <div className={styles.innerContainer}>
             <h1 className={styles.rightText}>AND</h1>
             <h1 className={styles.rightText}>A </h1>

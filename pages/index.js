@@ -21,7 +21,9 @@ export default function Home() {
     setExit(true);
 
     setTimeout(function () {
-      router.push("/about", "/");
+      // router.push("/about", "/");
+      router.push("/about");
+
     }, 1000);
   };
 

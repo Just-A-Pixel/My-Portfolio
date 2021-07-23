@@ -37,6 +37,7 @@
     /* transform: skewY(20deg); */
     width: 115vh;
     clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
+    
 }
 
 .rightText{

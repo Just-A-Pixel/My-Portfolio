@@ -51,7 +51,8 @@ function test() {
         </div>
 
         <motion.div className={styles.titleRight}
-        initial={{backgroundPosition:'10px'}}
+        initial={{backgroundPosition:'10px '}}
+        style={{visibility:'hidden'}}
         >
           <div className={styles.innerContainer}>
             <h1 className={styles.rightText}>AND</h1>

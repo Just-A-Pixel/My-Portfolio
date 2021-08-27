@@ -26,7 +26,6 @@
 .titleLeft, .titleLeftExit {
   text-align: left;
   width: 300px;
-  /* border-right: solid 4px rgb(201, 201, 201); */
   padding-left: 30px;
   height: 300px;
   margin: auto;

@@ -95,7 +95,7 @@ const rightAnimation = {
   },
 };
 
-const about = () => {
+const About = () => {
   const [change, setChange] = useState(false);
   const [exit, setExit] = useState(false);
   const [disable, setDisable] = useState(false);
@@ -204,4 +204,4 @@ const about = () => {
   );
 }
 
-export default about;
+export default About;

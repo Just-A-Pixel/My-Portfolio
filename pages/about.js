@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../styles/About.module.css";
 import { motion } from "framer-motion";
 import Arrow from "../components/LottieAnimation/Test";
 import { useRouter } from "next/router";
-import Link from "next/link";
+// import Link from "next/link";
 
 const leftAnimation = {
   initial: {
@@ -95,7 +95,7 @@ const rightAnimation = {
   },
 };
 
-function test() {
+const test = () => {
   const [change, setChange] = useState(false);
   const [exit, setExit] = useState(false);
   const [disable, setDisable] = useState(false);
@@ -180,7 +180,7 @@ function test() {
             </motion.h1>
 
             <div
-              class={styles.button}
+              className={styles.button}
               style={
                 change
                   ? { display: "none" }

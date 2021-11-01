@@ -3,97 +3,8 @@ import styles from "../styles/About.module.css";
 import { motion } from "framer-motion";
 import Arrow from "../components/LottieAnimation/Test";
 import { useRouter } from "next/router";
+import { leftAnimation, rightAnimation } from "../animations/aboutAnimation";
 // import Link from "next/link";
-
-const leftAnimation = {
-  initial: {
-    y: 500,
-    opacity: 0,
-  },
-  animate1: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "backIn",
-      type: "spring",
-      duration: 1,
-    },
-  },
-  animate2: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "backIn",
-      type: "spring",
-      duration: 1,
-      delay: 0.2,
-    },
-  },
-  animate3: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "backIn",
-      type: "spring",
-      duration: 1,
-      delay: 0.4,
-    },
-  },
-
-  exitanimate1: {
-    y: 0,
-    x: -200,
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: "backIn",
-      type: "spring",
-      duration: 1,
-    },
-  },
-  exitanimate2: {
-    y: 0,
-    x: -200,
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: "backIn",
-      type: "spring",
-      duration: 1,
-      delay: 0.2,
-    },
-  },
-  exitanimate3: {
-    y: 0,
-    x: -200,
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: "backIn",
-      type: "spring",
-      duration: 1,
-      delay: 0.4,
-    },
-  },
-};
-
-const rightAnimation = {
-  initial: {
-    backgroundPosition: "1000px ",
-    filter: "hue-rotate(-50deg)",
-  },
-  animate: {
-    backgroundPosition: `-100px`,
-    filter: "hue-rotate(0deg)",
-    transition: {
-      delay: 1.5,
-      duration: 1.8,
-    },
-  },
-};
 
 const About = () => {
   const [change, setChange] = useState(false);
@@ -106,11 +17,11 @@ const About = () => {
     setTimeout(function () {
       setExit(true);
     }, 1000);
-    setTimeout(function() {
-      setDisable(true);
-    }, 2500)
     setTimeout(function () {
-      router.push('/main')
+      setDisable(true);
+    }, 2500);
+    setTimeout(function () {
+      router.push("/main");
     }, 3000);
   };
 
@@ -121,7 +32,7 @@ const About = () => {
         className={styles.about}
         style={change ? {} : { overflowY: "hidden" }}
       >
-        <motion.div className={exit ? styles.titleLeftExit : styles.titleLeft} >
+        <motion.div className={exit ? styles.titleLeftExit : styles.titleLeft}>
           <motion.h1
             className={styles.leftText}
             variants={leftAnimation}
@@ -202,6 +113,6 @@ const About = () => {
       </div>
     </>
   );
-}
+};
 
 export default About;

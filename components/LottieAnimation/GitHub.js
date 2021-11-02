@@ -7,7 +7,7 @@ const style = {
   cursor: "pointer",
 };
 function GitHub() {
-  return <Lottie animationData={animation} style={style} />;
+  return <Lottie animationData={animation} style={style} onClick={() => window.open("https://github.com/Just-A-Pixel", "_blank")}/>;
 }
 
 export default GitHub;

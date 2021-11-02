@@ -27,11 +27,11 @@ const About = () => {
 
   return (
     <>
-      {/* Left side */}
       <div
         className={styles.about}
         style={change ? {} : { overflowY: "hidden" }}
-      >
+        >
+        {/* Left side */}
         <motion.div className={exit ? styles.titleLeftExit : styles.titleLeft}>
           <motion.h1
             className={styles.leftText}
@@ -63,7 +63,6 @@ const About = () => {
 
         <motion.div
           className={change ? styles.titleRight2 : styles.titleRight}
-          //   style={change ? { backgroundColor: "#40D9EA" } : {}}
           variants={rightAnimation}
           initial="initial"
           animate="animate"
@@ -71,20 +70,23 @@ const About = () => {
           <div className={styles.innerContainer}>
             <motion.h1
               className={styles.rightText}
-              animate={change ? { opacity: 0, y: -100 } : {}}
+              initial = {{y:0}}
+              animate={change ? { opacity: 0, y: -100 } : {y:0}}
             >
               AND
             </motion.h1>
             <motion.h1
               className={styles.rightText}
-              animate={change ? { opacity: 0, y: -100 } : {}}
+              initial = {{y:0}}
+              animate={change ? { opacity: 0, y: -100 } : {y:0}}
               transition={{ delay: 0.2 }}
             >
               A{" "}
             </motion.h1>
             <motion.h1
               className={styles.rightText}
-              animate={change ? { opacity: 0, y: -100 } : {}}
+              initial = {{y:0}}
+              animate={change ? { opacity: 0, y: -100 } : {y:0}}
               transition={{ delay: 0.4 }}
             >
               DEVELOPER
@@ -101,7 +103,7 @@ const About = () => {
                       width: "100px",
                       position: "absolute",
                       right: "20px",
-                      bottom: "10px",
+                      bottom: "10px"
                     }
               }
               onClick={() => updatePage()}

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 
 .about {
   display: flex;
@@ -55,6 +54,8 @@
 }
 
 .titleRight2 {
+
+  font-family: "Roboto", sans-serif;
   clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);
   margin-left: 0;
   left: -20px;
@@ -67,15 +68,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* right: 30px */
-  /* z-index: 3; */
+  height: 100vh;
 }
 
 .rightText {
   width: 400px;
   margin-right: 0;
   margin: auto;
-  margin-top: 38px;
+  /* margin-top: 43px; */
   font-weight: 400;
   color: #f9f9f9;
 }
@@ -86,7 +86,8 @@
 
 .innerContainer {
   height: 300px;
-  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
   text-align: right;
 }
 
@@ -106,7 +107,7 @@
     letter-spacing: 15px;
   }
 
-  .titleRight2 {
+  .titleRight2, .titleRight {
     margin-right: 10px;
   }
 }

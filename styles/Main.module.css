@@ -1,3 +1,24 @@
-.iconList {
-    
+.about {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  background-color: #f9f9f9;
+  width: 100vw;
+}
+
+
+
+.titleRight2 {
+  clip-path: polygon(3% 0, 100% 0, 100% 100%, 3% 100%);
+  margin-left: 0;
+  left: -20px;
+  background-color: #40d9ea;
+  background-size: 150%;
+  transition: 1500ms;
+  transition-delay: 1s;
+  width: 100%;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

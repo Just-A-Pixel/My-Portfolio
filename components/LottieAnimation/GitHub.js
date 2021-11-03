@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
 import animation from "./github.json";
-
+import motion from "framer-motion";
 const style = {
   width: "40px",
   cursor: "pointer",

@@ -7,7 +7,6 @@
 }
 
 
-
 .titleRight2 {
   clip-path: polygon(60px 0, 100% 0, 100% 100%, 60px 100%);
   margin-left: 0;
@@ -18,7 +17,41 @@
   transition-delay: 1s;
   width: 100%;
   margin-right: 0;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+}
+
+.intro {
+  font-family: "Roboto";
+  letter-spacing: 5px;
+  border-left: solid 5px rgba(255, 255, 255, 0.61);
+  margin-left: 00px;
+  margin-top: 250px;
+  margin-bottom: 70px;
+  font-size: 44px;
+  padding: 0;
+  padding-left: 40px;
+  padding-top: 0px;
+  color: white;
+  height: auto;
+}
+
+.intro > h1 {
+  margin: 0;
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.intro > h3 {
+  margin: 0;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.intro > h4 {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 20px;
+  padding-bottom: 0px;
 }

@@ -1,13 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import GitHub from "../components/LottieAnimation/GitHub";
 import styles from "../styles/Main.module.css";
 import Linkedin from "../components/LottieAnimation/Linkedin";
 import WebAnimation from "../components/LottieAnimation/webAnimation";
 import { iconListAnimation } from "../animations/mainAnimation";
+import dark from "../public/darkTransition.png";
+import router from "next/router";
 function main() {
+  const [trigger, setTrigger] = useState(false)
+
+  const darkMode = () => {
+    setTrigger(true)
+    setTimeout(function () {
+      router.push("/dark");
+    }, 1000);
+  };
+
   return (
-    <>
+    <div style={{ overflow: "hidden" }}>
       <div className={styles.about} style={{ overflowY: "hidden" }}>
         {/* Changing below style to css class causes bugs */}
         <motion.div
@@ -51,7 +63,7 @@ function main() {
             >
               <WebAnimation />
             </motion.div>
-      
+
             <motion.div
               initial={{ transform: "scaleY(0)" }}
               animate={{ transform: "scaleY(1)" }}
@@ -59,25 +71,54 @@ function main() {
               className={styles.intro}
             >
               <motion.h3
-                initial = {{transform: 'translateY(2000px)', opacity: '0'}}
-                animate = {{transform: 'translateY(0px)', opacity: '1', ease: 'easeOut'}}
-                transition={{duration: 1.5, delay: 2}}
-              >I am</motion.h3>
+                initial={{ transform: "translateY(2000px)", opacity: "0" }}
+                animate={{
+                  transform: "translateY(0px)",
+                  opacity: "1",
+                  ease: "easeOut",
+                }}
+                transition={{ duration: 1.5, delay: 2 }}
+              >
+                I am
+              </motion.h3>
               <motion.h1
-                initial = {{transform: 'translateY(2000px)', opacity: '0'}}
-                animate = {{transform: 'translateY(0px)', opacity: '1', ease: 'easeOut'}}
-                transition={{duration: 1.5, delay: 2.2}}
-              >Raj Anand</motion.h1>
+                initial={{ transform: "translateY(2000px)", opacity: "0" }}
+                animate={{
+                  transform: "translateY(0px)",
+                  opacity: "1",
+                  ease: "easeOut",
+                }}
+                transition={{ duration: 1.5, delay: 2.2 }}
+              >
+                Raj Anand
+              </motion.h1>
               <motion.h4
-              initial = {{transform: 'translateY(2000px)', opacity: '0'}}
-              animate = {{transform: 'translateY(0px)', opacity: '1', ease: 'easeOut'}}
-              transition={{duration: 1.5, delay: 2.4}}
-              >Fullstack developer</motion.h4>
+                initial={{ transform: "translateY(2000px)", opacity: "0" }}
+                animate={{
+                  transform: "translateY(0px)",
+                  opacity: "1",
+                  ease: "easeOut",
+                }}
+                transition={{ duration: 1.5, delay: 2.4 }}
+              >
+                Fullstack developer
+              </motion.h4>
             </motion.div>
           </div>
+
+          <h1
+            onClick={() => darkMode()}
+            style={{ fontSize: "50px", textAlign: "center" }}
+          >
+            And a fan of dark mode
+          </h1>
         </div>
       </div>
-    </>
+      
+{/* Transition */}
+<div  style={trigger?{textAlign: "center", position: 'absolute', width: '2000px', height: '2000px', background: 'black' ,left: '50%', transform: 'translateX(-50%)', top: '-50%', transition: '1000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
+          
+    </div>
   );
 }
 

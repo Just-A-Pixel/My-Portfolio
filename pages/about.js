@@ -21,7 +21,7 @@ const About = () => {
       setDisable(true);
     }, 2500);
     setTimeout(function () {
-      router.push("/main");
+      router.push("/main", "/");
     }, 3000);
   };
 

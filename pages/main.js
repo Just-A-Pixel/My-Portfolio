@@ -8,7 +8,7 @@ import WebAnimation from "../components/LottieAnimation/webAnimation";
 import { iconListAnimation } from "../animations/mainAnimation";
 import dark from "../public/darkTransition.png";
 import router from "next/router";
-function main() {
+const Main = () => {
   const [trigger, setTrigger] = useState(false)
 
   const darkMode = () => {
@@ -116,10 +116,10 @@ function main() {
       </div>
       
 {/* Transition */}
-<div  style={trigger?{textAlign: "center", position: 'absolute', width: '2000px', height: '2000px', background: 'black' ,left: '50%', transform: 'translateX(-50%)', top: '-50%', transition: '1000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
+<div  style={trigger?{textAlign: "center", position: 'absolute', width: '2000px', height: '2000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60%', transition: '1000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
           
     </div>
   );
 }
 
-export default main;
+export default Main;

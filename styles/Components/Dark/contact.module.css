@@ -1,0 +1,9 @@
+.contact__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    padding-left: 10px;
+}

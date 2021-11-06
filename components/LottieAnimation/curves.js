@@ -11,6 +11,7 @@ function Curves({ section }) {
     // width: "1000px",
     maxWidth: "1500px",
     margin: "auto",
+    marginTop: '0',
     opacity: 0.9,
     transform: `scaleY(${scale}) translateX(${pos}vw)`,
     transition: "1700ms easeIn",

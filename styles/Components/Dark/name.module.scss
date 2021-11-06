@@ -35,6 +35,10 @@ $secondary-color: rgb(235, 235, 235);
 .flicker2 {
     animation: flicker 3s infinite alternate;
 }
+
+.flicker3 {
+  animation: flicker 4s infinite alternate;
+}
 @keyframes pulsate {
   100% {
     text-shadow: 0 0 4px $secondary-color, 0 0 11px $secondary-color, 0 0 19px $secondary-color, 0 0 40px $primary-color,

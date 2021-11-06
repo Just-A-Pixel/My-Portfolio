@@ -12,6 +12,9 @@ const Name = () => {
       <span className={`${styles.neonText} ${styles.pulsate}`}>
         Ana<span className={styles.flicker}>n</span>d
       </span>
+      <br/>
+      <h6 className={`${styles.neonText} ${styles.pulsate} ${styles.flicker3}`} style={{fontSize: '20px', textAlign: 'left', position: 'absolute'}}>FullStack Developer</h6>
+
     </motion.div>
    
   )

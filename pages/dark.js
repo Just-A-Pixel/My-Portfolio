@@ -20,7 +20,6 @@ const Dark = () => {
       <div className={styles.dark}>
         <Contacts />
         <Name />
-waddadwad
         
           <Curves section={section} />
         

@@ -1,5 +1,6 @@
 $primary-color: rgb(9, 185, 216);
 $secondary-color: rgb(235, 235, 235);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 .dark__name {
     width: 300px;
     margin: auto;
@@ -12,12 +13,12 @@ $secondary-color: rgb(235, 235, 235);
 
 .neonText {
   color: rgb(255, 255, 255);
-  font-family: 'Roboto';
-  letter-spacing: 5px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 10px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 55px;
+  font-size: 65px;
   text-shadow: 0 0 7px $secondary-color, 0 0 10px $secondary-color, 0 0 21px $secondary-color, 0 0 42px $primary-color,
     0 0 82px $primary-color, 0 0 92px $primary-color, 0 0 102px $primary-color, 0 0 151px $primary-color;
 }

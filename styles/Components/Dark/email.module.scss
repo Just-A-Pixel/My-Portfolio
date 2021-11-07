@@ -1,5 +1,5 @@
-$primary-color: rgba(219, 221, 124, 0.699);
-$secondary-color: rgb(226, 207, 31);
+$primary-color: rgba(11, 216, 243, 0.699);
+$secondary-color: rgb(240, 241, 241);
 
 .email {
     display: flex;
@@ -20,8 +20,8 @@ $secondary-color: rgb(226, 207, 31);
     margin: 20px;
     font-size: 20px;
     padding: 10px;
-    color: rgb(221, 208, 28);
-    border: solid 1px rgb(248, 248, 248);
+    color: $secondary-color;
+    border: solid 1px $secondary-color;
     box-shadow: 0 0 4px  $secondary-color ,
         0 0 11px  $secondary-color ,
         0 0 10px $primary-color inset,
@@ -36,8 +36,7 @@ $secondary-color: rgb(226, 207, 31);
   
         box-shadow:
         0 0 4px  $secondary-color ,
-        0 0 11px  $secondary-color ,
-        0 0 11px  $secondary-color ,
+        0 0 9px  $secondary-color ,
         0 0 10px $primary-color inset,
         0 0 20px  $primary-color inset,
         0 0 80px 0px $primary-color

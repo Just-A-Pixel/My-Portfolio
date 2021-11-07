@@ -85,8 +85,27 @@ const Dark = () => {
               <Email />
          
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={section == "work" ? a : b}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          style={{
+            color: "white",
+            marginRight: "80px",
+            maxWidth: "600px",
+            fontSize: "18px",
+            textAlign: "start",
+            position: "absolute",
+            top: "100px",
+            right: "30px",
+          }}
+        >
+          
+              <Email />
+         
+        </motion.div>
 
-        zczcszczcszc
+        <h6>dawdadawdwa</h6>
         <Curves section={section} />
         <div
           style={{

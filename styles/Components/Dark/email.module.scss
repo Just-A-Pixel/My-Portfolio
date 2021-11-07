@@ -1,10 +1,14 @@
+$primary-color: rgba(219, 221, 124, 0.699);
+$secondary-color: rgb(226, 207, 31);
+
 .email {
     display: flex;
     flex-direction: column;
-    border: solid 1px red;
+    border: solid 1px $secondary-color;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.699);
+    border-radius: 5px;
+    // box-shadow: 0 0 5px 5px rgba(115, 204, 231, 0.699);
+    animation: flicker 4s infinite alternate;
 }
 
 .email input, .email textarea{
@@ -15,6 +19,32 @@
     border: none;
     margin: 20px;
     font-size: 20px;
-    padding: 5px;
-    color: white;
+    padding: 10px;
+    color: rgb(221, 208, 28);
+    border: solid 1px rgb(248, 248, 248);
+    box-shadow: 0 0 4px  $secondary-color ,
+        0 0 11px  $secondary-color ,
+        0 0 10px $primary-color inset,
+
 }
+
+
+
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 75%, 100% {
+  
+        box-shadow:
+        0 0 4px  $secondary-color ,
+        0 0 11px  $secondary-color ,
+        0 0 11px  $secondary-color ,
+        0 0 10px $primary-color inset,
+        0 0 20px  $primary-color inset,
+        0 0 80px 0px $primary-color
+
+    }
+    
+    20%, 24%, 55% {        
+       box-shadow: none;
+    }    
+  }

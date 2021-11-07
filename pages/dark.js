@@ -6,6 +6,7 @@ import Name from "../components/dark/Name";
 import Contacts from "../components/dark/Contacts";
 import img from "../public/Github.svg";
 import Image from "next/image";
+import Email from "../components/dark/email";
 
 const para = {
   p1: `I am a Full-Stack developer located in India. I have a serious passion for UI effects, creative animations, and quality user experience. 
@@ -23,30 +24,70 @@ const Dark = () => {
     else if (section == "about") setPosition(0);
     else if (section == "work") setPosition(40);
   }, [section]);
+
+  const a = {
+    opacity: 1,
+    y: 0,
+  };
+
+  const b = {
+    opacity: 0,
+  };
   return (
     <>
       <div className={styles.dark}>
         <Contacts />
-        <div style={{ display: "flex" }}>
-          <Name />
-          <div style={{ color: "white", marginRight: "80px", maxWidth: '600px', fontSize: '18px', textAlign: 'start', position: 'relative', top: '100px'  }}>
-            <p>
-              I am a Full-Stack developer located in India. I have a serious
-              passion for UI effects, creative animations, and quality user
-              experience. Recently dived into backend and felt equally
-              passionate for building apis and scaling applications.
-              <br /><br />
-              Well-organised person, problem solver and a prefinal year student
-              at Vellore Institute of Technology.
-              <br /><br />
-              Interested in the web and working on ambitious projects with
-              incredible people.
-            </p>
-          </div>
-        </div>
+        {/* <div style={{ display: "flex" }}> */}
+        <Name />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={section == "about" ? a : b}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          style={{
+            color: "white",
+            marginRight: "80px",
+            maxWidth: "600px",
+            fontSize: "18px",
+            textAlign: "start",
+            position: "absolute",
+            top: "100px",
+            right: "0px",
+          }}
+        >
+          <p>
+            {para.p1}
+            <br />
+            <br />
+            {para.p2}
 
+            <br />
+            <br />
+            {para.p3}
+          </p>
+        </motion.div>
+        {/* </div> */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={section == "contact" ? a : b}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          style={{
+            color: "white",
+            marginRight: "80px",
+            maxWidth: "600px",
+            fontSize: "18px",
+            textAlign: "start",
+            position: "absolute",
+            top: "100px",
+            right: "30px",
+          }}
+        >
+          
+              <Email />
+         
+        </motion.div>
+
+        zczcszczcszc
         <Curves section={section} />
-
         <div
           style={{
             display: "flex",

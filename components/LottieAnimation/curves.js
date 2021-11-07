@@ -4,7 +4,7 @@ import animation from "./curves.json";
 import { motion } from "framer-motion";
 
 function Curves({ section }) {
-  const [flag, setFlag] = useState(true);
+  // const [flag, setFlag] = useState(true);
   const [scale, setScale] = useState(0);
   const [pos, setPos] = useState(0);
   const style = {
@@ -33,7 +33,7 @@ function Curves({ section }) {
     else if(section == "contact")
       setPos(-50);
     else setPos(0)
-  }, )
+  }, [section])
 
   // useEffect(() => {
   //   console.log(flag);
@@ -49,7 +49,7 @@ function Curves({ section }) {
   return (
     <Lottie
       lottieRef={lottieRef}
-      onLoopComplete={() => setFlag(!flag)}
+      // onLoopComplete={() => setFlag(!flag)}
       animationData={animation}
       style={{
         maxWidth: "1500px",

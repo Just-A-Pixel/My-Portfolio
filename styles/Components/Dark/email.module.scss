@@ -1,0 +1,20 @@
+.email {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.699);
+}
+
+.email input, .email textarea{
+    font-family: 'Roboto';
+    font-weight: 100;
+    background-color: rgba(238, 238, 238, 0.137);
+    outline: none;
+    border: none;
+    margin: 20px;
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+}

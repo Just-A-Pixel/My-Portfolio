@@ -3,12 +3,18 @@ $secondary-color: rgb(235, 235, 235);
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 .dark__name {
     width: 300px;
-    margin: auto;
-    margin-left: 200px;
+    margin: auto auto auto 200px;
+    // margin-left: 200px
     margin-bottom: 0;
     padding-top: 100px;
-  display: inline-block;
+  display: inline;
     /* text-align: center; */
+}
+
+@media only screen and (max-width: 1220px){
+  .dark__name{
+    margin: auto auto auto auto;
+  }
 }
 /* Neon */
 

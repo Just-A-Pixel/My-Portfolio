@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+.dark {
+  background-color: #0c0c0c;
+  height: 100vh;
+  margin-top: 0;
+  overflow-y: scroll;
+  
+}
+
+.dark__header{
+  display: "flex";
+  flex-direction:'column';
+  align-items:'center';
+  justify-content: 'space-between';
+}
+
+.dark__about{
+  color: "white";
+  margin-right: "80px";
+  font-size: "18px";
+  text-align: "start";
+  position: "relative";
+  top: "90px";
+}

@@ -7,15 +7,7 @@ function Curves({ section }) {
   // const [flag, setFlag] = useState(true);
   const [scale, setScale] = useState(0);
   const [pos, setPos] = useState(0);
-  const style = {
-    // width: "1000px",
-    maxWidth: "1500px",
-    margin: "auto",
-    marginTop: '0',
-    opacity: 0.9,
-    transform: `scaleY(${scale}) translateX(${pos}vw)`,
-    transition: "1700ms easeIn",
-  };
+  
 
   const lottieRef = useRef();
   useEffect(() => {
@@ -54,11 +46,12 @@ function Curves({ section }) {
       style={{
         maxWidth: "1500px",
         margin: "auto",
-        marginBottom: '0',
-        marginTop: '200px',
+        marginTop: '50px',
+        // marginBottom: '10vh',
         opacity: 0.9,
+        
         //   cursor: "pointer",
-        transform: `scaleY(${scale}) translateX(${pos}vw)`,
+        transform: `scaleY(${scale}) translateX(${pos}vw) `,
         transition: "1500ms",
       }}
     />

@@ -7,7 +7,8 @@ import Contacts from "../components/dark/Contacts";
 import img from "../public/Github.svg";
 import Image from "next/image";
 import Email from "../components/dark/email";
-
+import Intro from "../components/dark/intro";
+import IntroPhone from "../components/dark/introPhone"
 const para = {
   p1: `I am a Full-Stack developer located in India. I have a serious passion for UI effects, creative animations, and quality user experience. 
     Recently dived into backend and felt equally passionate for building apis and scaling applications.`,
@@ -18,34 +19,16 @@ const para = {
 const Dark = () => {
   const [section, setSection] = useState("about");
   const [position, setPosition] = useState(0);
-  const [width, setWidth] = useState(120);
+  const size = useWindowSize();
+  const [width, setWidth] = useState(size.width);
+
   useEffect(() => {
     if (section == "contact") setPosition(-40);
     else if (section == "about") setPosition(0);
     else if (section == "work") setPosition(40);
   }, [section]);
 
-  useEffect(() => { 
-    window.addEventListener("resize", () => {
-      console.log(window.innerHeight, window.innerWidth);
-      setWidth(window.innerWidth);
-    });
-    window.addEventListener("load", () => {
-      console.log(window.innerHeight, window.innerWidth);
-      setWidth(window.innerWidth);
-    });
-    return (
-      window.removeEventListener("resize", () => {
-        console.log(window.innerHeight, window.innerWidth);
-        setWidth(window.innerWidth);
-      }),
-
-      window.removeEventListener("load", () => {
-        console.log(window.innerHeight, window.innerWidth);
-        setWidth(window.innerWidth);
-      })
-    )
-  }, []);
+ 
   const a = {
     opacity: 1,
     y: 0,
@@ -58,9 +41,9 @@ const Dark = () => {
     <>
       <div className={styles.dark}>
         <Contacts />
-        <div style={ width > 1220? {
+        <div style={ size.width > 1220? {
           display:'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
 
         }: {
           display:'flex',
@@ -69,44 +52,14 @@ const Dark = () => {
           justifyContent: 'space-between',
         }}>
           <Name />
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={section == "about" ? a : b}
-            transition={{ delay: 0.5, duration: 0.4 }}
-            style={width > 1220?{
-              color: "white",
-              marginRight: "80px",
-              maxWidth: "500px",
-              fontSize: "18px",
-              textAlign: "start",
-              // marginTop: "500px",
-              position: "relative",
-              top: "50px",
-              // right: "0px",
-            }:{
-              color: "white",
-              // marginRight: "80px",
-              maxWidth: "500px",
-              fontSize: "18px",
-              textAlign: "center",
-              // marginTop: "500px",
-              position: "relative",
-              top: "50px",
-              // right: "0px",
-            }}
-          >
-            <p>
-              {para.p1}
-              <br />
-              <br />
-              {para.p2}
+          
+        
 
-              <br />
-              <br />
-              {para.p3}
-            </p>
-          </motion.div>
+          <IntroPhone para = {para} section = {section} a = {a} b = {b} width = {width}/>
+          
         </div>
+
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={section == "contact" ? a : b}
@@ -193,5 +146,38 @@ const Dark = () => {
     </>
   );
 };
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    if (typeof window !== 'undefined') {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+    
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+     
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+    
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}
 
 export default Dark;

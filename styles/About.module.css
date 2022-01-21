@@ -45,7 +45,7 @@
 .titleRight2 {
   /* background-color: #40D9EA; */
   /* transform: skewY(20deg); */
-  width: 50%;
+  /* width: 50%; */
   clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
   background-image: url("../public/ellipse");
   background-repeat: no-repeat;

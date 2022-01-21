@@ -76,14 +76,14 @@ const leftAnimation = {
 const rightAnimation = {
   initial: {
     backgroundPosition: "1000px ",
-    filter: "hue-rotate(-50deg)",
+    filter: "hue-rotate(-100deg)",
   },
   animate: {
-    backgroundPosition: `-100px`,
+    backgroundPosition: `-88px`,
     filter: "hue-rotate(0deg)",
     transition: {
       delay: 1.5,
-      duration: 1.8,
+      duration: 2,
     },
   },
 };

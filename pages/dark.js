@@ -75,7 +75,7 @@ const Dark = () => {
             right: "30px",
           }}
         >
-          <Email />
+          {/* <Email /> */}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -95,7 +95,7 @@ const Dark = () => {
           <Email />
         </motion.div>
 
-        <h6>dawdadawdwa</h6>
+        {/* <h6>dawdadawdwa</h6> */}
 
         <div>
           <Curves section={section} />
@@ -120,7 +120,7 @@ const Dark = () => {
               onClick={() => setSection("work")}
               style={{ cursor: "pointer" }}
             >
-              My Work
+              Contact
             </motion.li>
             <motion.li
               initial={{ opacity: 0, y: "60px" }}
@@ -138,7 +138,7 @@ const Dark = () => {
               onClick={() => setSection("contact")}
               style={{ cursor: "pointer" }}
             >
-              Contact
+              My Work (Under Construction)
             </motion.li>
           </div>
         </div>

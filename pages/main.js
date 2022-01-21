@@ -106,12 +106,16 @@ const Main = () => {
             </motion.div>
           </div>
 
-          <h1
+          <motion.h2
             onClick={() => darkMode()}
-            style={{ fontSize: "50px", textAlign: "center" }}
+            className={styles.darkModeButton}
+            style={{  textAlign: "center" }}
+            initial = {{opacity: 0}}
+            animate = {{opacity: 1}}
+            transition={{delay: 4}}
           >
-            And a fan of dark mode
-          </h1>
+            Enter dark mode 
+          </motion.h2>
         </div>
       </div>
       

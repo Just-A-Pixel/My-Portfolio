@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect} from "react";
 import Greeting from "../components/Greeting";
 import styles from "../styles/Home.module.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -11,6 +11,7 @@ let open = "/DoorOpen2.svg";
 export default function Home() {
   const [img, setImg] = useState(close);
   const [exit, setExit] = useState(false);
+  const ref = useRef()
   const router = useRouter();
 
   const openDoor = () => {
@@ -27,8 +28,14 @@ export default function Home() {
     }, 1000);
   };
 
+  useEffect(() => {
+    console.log(ref.current.clientWidth)
+    if(ref.current.clientWidth < 800){
+      alert("Phone view under construction! Please use a laptop/desktop for an amazing experience, filled with my love to code :)")
+    }
+  })
   return (
-    <>
+    <div ref = {ref}>
       <Head>
         <title>Raj Anand</title>
       </Head>
@@ -71,6 +78,6 @@ export default function Home() {
           }
         ></div>
       </div>
-    </>
+    </div>
   );
 }

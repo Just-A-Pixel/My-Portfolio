@@ -96,7 +96,7 @@ const About = () => {
               className={styles.button}
               style={
                 change
-                  ? { display: "block" }
+                  ? { display: "none" }
                   : {
                       transform: "rotate(-90deg)",
                       padding: 0,

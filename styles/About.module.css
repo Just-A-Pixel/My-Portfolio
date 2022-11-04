@@ -115,33 +115,40 @@
   .titleRight,
   .titleRight2 {
     background-size: 2000px;
+    margin-right: 0px;
   }
 
   .rightText {
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
-}
+} 
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 900px) {
   .about {
     flex-direction: column;
     height: 100vh;
   }
 
-  .titleLeft, .titleRight{
+  .titleLeft{
     margin-left: 0;
+  }
+  .titleLeft, .titleRight, .titleRight2{
+    /* margin-left: 0; */
+    font-size: 15px;
   }
   .titleRight,
   .titleRight2 {
-    clip-path: polygon(0% 50%, 100% 0, 100% 100%, 0% 100%);
     background-image: url("../public/ellipse.png");
     background-repeat: no-repeat;
-    /* background-size: 150%; */
     background-position: bottom;
+    width: 100vw;
+    height: 100%;
   }
 
+  .titleRight2{
+    clip-path: polygon(60px 0, 100% 0, 100% 100%, 60px 100%);
+  }
   .titleRight{
-    width: 100vw;
-    height: 100%;    
+    clip-path: polygon(0% 50%, 100% 0, 100% 100%, 0% 100%);
   }
 }

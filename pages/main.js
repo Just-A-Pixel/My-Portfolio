@@ -19,8 +19,8 @@ const Main = () => {
   };
 
   return (
-    <div style={{ overflow: "hidden" }}>
-      <div className={styles.about} style={{ overflowY: "hidden" }}>
+    <div className = {styles.main}>
+      <div className={styles.about}>
         {/* Changing below style to css class causes bugs */}
         <motion.div
           variants={iconListAnimation}
@@ -32,7 +32,7 @@ const Main = () => {
             flexDirection: "column",
             position: "absolute",
             left: "9px",
-            marginTop: "50px",
+            marginTop: "50px"
           }}
         >
           <motion.div
@@ -55,8 +55,9 @@ const Main = () => {
         {/* DO NOT TOUCH THIS LINE*/}
         <div className={styles.titleRight2}>
           {/* Flex */}
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className={styles.main__content}>
             <motion.div
+              className={styles.web__animation}
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}

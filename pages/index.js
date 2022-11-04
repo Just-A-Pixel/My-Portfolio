@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const close = "/DoorClose.svg";
 const open = "/DoorOpen2.svg";
-const delay = 1
+const delay = 0.5
 
 export default function Home() {
   const [img, setImg] = useState(close);

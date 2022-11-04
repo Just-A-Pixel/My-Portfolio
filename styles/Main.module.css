@@ -110,12 +110,15 @@
 
   .icons {
     flex-direction: row !important;
-    margin-top: 10px !important;
+    margin-top: 0px !important;
+    padding-top: 10px;
     left: 50vw !important;
     width: 100%;
     justify-content: space-around;
     left: 0 !important;
     transition: 1500ms;
+    box-shadow: 0px 0px 10px 15px #ffffff;
+    background-color: white;
   }
   
   .main__content{
@@ -125,7 +128,7 @@
     align-items: center;
     /* margin-bottom: 200px; */
     /* height: inherit; */
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     height: 110%;
   }
   .main{

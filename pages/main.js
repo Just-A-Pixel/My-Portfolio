@@ -20,6 +20,7 @@ const Main = () => {
 
   return (
     <div className = {styles.main}>
+      
       <div className={styles.about}>
         {/* Changing below style to css class causes bugs */}
         <motion.div
@@ -32,7 +33,7 @@ const Main = () => {
             flexDirection: "column",
             position: "absolute",
             left: "9px",
-            marginTop: "50px"
+            marginTop: "50px",
           }}
         >
           <motion.div
@@ -53,11 +54,10 @@ const Main = () => {
           </motion.div>
         </motion.div>
         {/* DO NOT TOUCH THIS LINE*/}
-        <div className={styles.titleRight2}>
+        <div className={styles.titleRight2} >
           {/* Flex */}
           <div className={styles.main__content}>
             <motion.div
-              className={styles.web__animation}
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 1 }}
@@ -105,6 +105,18 @@ const Main = () => {
                 Fullstack developer
               </motion.h4>
             </motion.div>
+
+
+            <motion.h2
+              onClick={() => darkMode()}
+              className={styles.darkModeButtonMobile}
+              style={{  textAlign: "center" }}
+              initial = {{opacity: 0}}
+              animate = {{opacity: 1}}
+              transition={{delay: 4}}
+            >
+            Enter dark mode 
+          </motion.h2>
           </div>
 
           <motion.h2
@@ -117,11 +129,12 @@ const Main = () => {
           >
             Enter dark mode 
           </motion.h2>
+          
         </div>
       </div>
       
 {/* Transition */}
-<div  style={trigger?{textAlign: "center", position: 'absolute', width: '2000px', height: '2000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60%', transition: '1000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
+{/* <div  style={trigger?{textAlign: "center", position: 'absolute', width: '2000px', height: '2000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60%', transition: '1000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div> */}
           
     </div>
   );

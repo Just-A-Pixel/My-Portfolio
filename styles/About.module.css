@@ -134,7 +134,8 @@
   }
   .titleLeft, .titleRight, .titleRight2{
     /* margin-left: 0; */
-    font-size: 15px;
+    font-size: 10px;
+    letter-spacing: 1.2;
   }
   .titleRight,
   .titleRight2 {

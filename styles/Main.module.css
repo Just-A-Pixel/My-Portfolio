@@ -1,5 +1,5 @@
 .main{
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 .about {
   display: flex;
@@ -7,7 +7,7 @@
   height: 2000px;
   background-color: #f9f9f9;
   width: 100vw;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 .icons{
@@ -73,7 +73,7 @@
   top: "50%";
 }
 
-.darkModeButton{
+.darkModeButton, .darkModeButtonMobile{
   font-size: 30px;
   text-align: center;
   background-color: aliceblue;
@@ -88,7 +88,11 @@
   cursor: pointer;
 }
 
-.darkModeButton:hover{
+.darkModeButtonMobile{
+  display: none;
+}
+
+.darkModeButton:hover, .darkModeButtonMobile:hover{
   background-color: black;
   transition: 500ms;
   color: aliceblue;
@@ -120,15 +124,17 @@
     text-align: center;
     align-items: center;
     /* margin-bottom: 200px; */
-    height: inherit;
+    /* height: inherit; */
     overflow-y: scroll;
+    height: 110%;
   }
   .main{
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    /* height: 100%; */
   }
   .about{
     overflow-y: scroll;
-    height: auto;
+    height: 100%;
   }
 
   .web__animation{
@@ -137,8 +143,6 @@
   }
 
   .intro {
-    font-family: "Roboto";
-    letter-spacing: 5px;
     border-top: solid 5px rgba(255, 255, 255, 0.61);
     border-left: 0;
     margin-left: 00px;
@@ -146,9 +150,32 @@
     margin-bottom: 70px;
     font-size: 44px;
     padding: 0;
-    /* padding-left: 40px; */
     padding-top: 10px;
     color: white;
     height: auto;
+  }
+
+  .titleRight2 {
+    clip-path: polygon(0px 60px, 100% 60px, 100% 100%, 0px 100%);
+    margin-left: 0;
+    left: -20px;
+    background-color: #40d9ea;
+    background-size: 150%;
+    transition: 1500ms;
+    transition-delay: 1s;
+    width: 100%;
+    margin-right: 0;
+    height: 1500px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .darkModeButtonMobile{
+    display: initial;
+  }
+
+  .darkModeButton {
+    display: none;
   }
 }

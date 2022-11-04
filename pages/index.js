@@ -5,8 +5,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-let close = "/DoorClose.svg";
-let open = "/DoorOpen2.svg";
+const close = "/DoorClose.svg";
+const open = "/DoorOpen2.svg";
+const delay = 1
 
 export default function Home() {
   const [img, setImg] = useState(close);
@@ -43,7 +44,7 @@ export default function Home() {
         className={styles.container}
         style={{ overflowX: "hidden", overflowY: "hidden" }}
       >
-        <Greeting />
+        <Greeting delay={delay}/>
 
         <AnimatePresence>
           <motion.img
@@ -56,7 +57,7 @@ export default function Home() {
             onClick={() => pageTransition()}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.2 }}
+            transition={{ delay: delay+2.2 }}
             exit={{ opacity: 0 }}
           />
         </AnimatePresence>
@@ -71,8 +72,8 @@ export default function Home() {
               ? {
                   height: "1000px",
                   width: "1000px",
-                  transform: "scale(2, 2)",
-                  transition: "800ms",
+                  transform: "scale(3, 3)",
+                  transition: "1100ms",
                 }
               : {}
           }

@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../styles/Greeting.module.css";
 
-function Greeting() {
+function Greeting({delay}) {
+  
   return (
     <div>
       <motion.div
@@ -15,7 +16,7 @@ function Greeting() {
           style={{ display: "inline-block" }}
           initial={{ y: -500 }}
           animate={{ y: 0 }}
-          transition={{ delay: 1.7, type: "spring", bounce: 0.5 }}
+          transition={{ delay: delay+1.7, type: "spring", bounce: 0.5 }}
         >
           .
         </motion.div>
@@ -25,7 +26,7 @@ function Greeting() {
         className={styles.subheading}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.3 }}
+        transition={{ delay: delay+1.3 }}
       >
         {" "}
         WELCOME TO MY

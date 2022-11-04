@@ -2,9 +2,10 @@
 .about {
   display: flex;
   justify-content: space-around;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #f9f9f9;
-  width: 100vw;
+  /* width: 100%; */
+  padding: 0;
 }
 
 .titleLeft,
@@ -47,8 +48,9 @@
   /* transform: skewY(20deg); */
   /* width: 50%; */
   clip-path: polygon(32% 0, 100% 0, 100% 100%, 0% 100%);
-  background-image: url("../public/ellipse");
+  background-image: url("../public/ellipse.png");
   background-repeat: no-repeat;
+  background-size: 120%;
   /* z-index: 3; */
   /* filter: hue-rotate(-30deg); */
 }
@@ -100,15 +102,24 @@
   bottom: 10px;
 }
 
-@media only screen and (max-width: 900px) {
-  .titleLeft,
-  .titleRight {
-    font-size: 15px;
-    letter-spacing: 15px;
+@media only screen and (max-width: 1111px) {
+  .titleRight, .titleRight2{
+    background-attachment: fixed;
   }
+}
 
-  .titleRight2, .titleRight {
-    margin-right: 00px;
-    background-position: left;
+@media only screen and (max-width: 900px) {
+  .titleRight, .titleRight2{
+    background-size:2000px;
+  }
+  .leftText{
+    /* font-size: 20px; */
+  }
+  .rightText{
+    /* font-size: 20px; */
+    margin-right: 10px;
+    /* margin: 10px auto; */
+    /* height: 0; */
+    /* margin-bottom; */
   }
 }

@@ -10,7 +10,7 @@ import Email from "../components/dark/email";
 import Intro from "../components/dark/intro";
 import IntroPhone from "../components/dark/introPhone"
 const para = {
-  p1: `I am a Full-Stack developer located in India. I have a serious passion for UI effects, creative animations, and quality user experience. 
+  p1: `Hello! I am a Software Developer I have a serious passion for UI effects, creative animations, and quality user experience. 
     Recently dived into backend and felt equally passionate for building apis and scaling applications.`,
   p2: ` Well-organised person, problem solver and a prefinal year student at Vellore Institute of Technology.`,
   p3: `Interested in the web and working on ambitious projects with incredible people.`,

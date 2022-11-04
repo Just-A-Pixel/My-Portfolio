@@ -123,12 +123,16 @@
   
   .main__content{
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: flex-start;
     text-align: center;
     align-items: center;
+    transform: scale(0.6);
     /* margin-bottom: 200px; */
     /* height: inherit; */
     /* overflow-y: scroll; */
+    position: relative;
+    top: -180px;
     height: 110%;
   }
   .main{

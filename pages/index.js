@@ -29,12 +29,12 @@ export default function Home() {
     }, 1000);
   };
 
-  useEffect(() => {
-    console.log(ref.current.clientWidth)
-    if(ref.current.clientWidth < 800){
-      alert("Phone view under construction! Please use a laptop/desktop for an amazing experience, filled with my love to code :)")
-    }
-  })
+  // useEffect(() => {
+  //   console.log(ref.current.clientWidth)
+  //   if(ref.current.clientWidth < 800){
+  //     alert("Phone view under construction! Please use a laptop/desktop for an amazing experience, filled with my love to code :)")
+  //   }
+  // })
   return (
     <div ref = {ref}>
       <Head>

@@ -1,4 +1,3 @@
-
 .about {
   display: flex;
   justify-content: space-around;
@@ -23,7 +22,8 @@
   /* align-items: center; */
 }
 
-.titleLeft, .titleLeftExit {
+.titleLeft,
+.titleLeftExit {
   text-align: left;
   width: 300px;
   padding-left: 30px;
@@ -103,23 +103,48 @@
 }
 
 @media only screen and (max-width: 1111px) {
-  .titleRight, .titleRight2{
+
+  .titleRight,
+  .titleRight2 {
     background-attachment: fixed;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .titleRight, .titleRight2{
-    background-size:2000px;
+
+  .titleRight,
+  .titleRight2 {
+    background-size: 2000px;
   }
-  .leftText{
-    /* font-size: 20px; */
-  }
-  .rightText{
-    /* font-size: 20px; */
+
+  .rightText {
     margin-right: 10px;
-    /* margin: 10px auto; */
-    /* height: 0; */
-    /* margin-bottom; */
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .about {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .titleLeft, .titleRight{
+    margin-left: 0;
+  }
+  .titleRight,
+  .titleRight2 {
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    background-image: url("../public/ellipse.png");
+    background-repeat: no-repeat;
+    /* background-size: 150%; */
+    background-position: bottom;
+  }
+
+  .titleRight{
+    width: 100vw;
+    height: 100%;
+    /* border: solid 5px black; */
+    background-size: cover;
+    
   }
 }

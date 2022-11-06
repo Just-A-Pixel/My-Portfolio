@@ -117,6 +117,7 @@ const Main = () => {
             >
             Enter dark mode 
           </motion.h2>
+          <br/>
           </div>
 
           <motion.h2

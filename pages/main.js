@@ -71,6 +71,7 @@ const Main = () => {
               transition={{ duration: 1, delay: 1 }}
               className={styles.intro}
             >
+              
               <motion.h3
                 initial={{ transform: "translateY(2000px)", opacity: "0" }}
                 animate={{
@@ -134,9 +135,9 @@ const Main = () => {
         </div>
       </div>
       
-{/* Transition */}
-<div  style={trigger?{textAlign: "center", position: 'absolute', width: '2000px', height: '2000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60%', transition: '1000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
-          
+       {/* Transition */}
+<div  style={trigger?{textAlign: "center", position: 'absolute', width: '4000px', height: '4000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60vh', transition: '2000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
+   
     </div>
   );
 }

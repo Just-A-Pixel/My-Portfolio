@@ -15,7 +15,7 @@ const Main = () => {
     setTrigger(true)
     setTimeout(function () {
       router.push("/dark");
-    }, 1000);
+    }, 2000);
   };
 
   return (
@@ -133,10 +133,10 @@ const Main = () => {
           </motion.h2>
           
         </div>
+<div  style={trigger?{textAlign: "center", position: 'absolute', width: '4000px', height: '4000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60vh', transition: '2000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
       </div>
       
        {/* Transition */}
-<div  style={trigger?{textAlign: "center", position: 'absolute', width: '4000px', height: '4000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60vh', transition: '2000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div>
    
     </div>
   );

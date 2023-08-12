@@ -32,10 +32,13 @@ const Dark = () => {
   const a = {
     opacity: 1,
     y: 0,
+    zIndex: 3,
+    background: "black"
   };
 
   const b = {
     opacity: 0,
+    zIndex: -1
   };
   return (
     <>
@@ -72,10 +75,9 @@ const Dark = () => {
             textAlign: "start",
             position: "absolute",
             top: "100px",
-            right: "30px",
+            right: "30px"
           }}
         >
-          {/* <Email /> */}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -90,6 +92,7 @@ const Dark = () => {
             position: "absolute",
             top: "100px",
             right: "30px",
+            zIndex: "-1"
           }}
         >
           <Email />
@@ -97,7 +100,20 @@ const Dark = () => {
 
         {/* <h6>dawdadawdwa</h6> */}
 
-        <div>
+        <div style={{
+          // overflowX: 'hidden',
+          border: 'solid',
+          borderWidth: '10px',
+          borderColor: 'red',
+          // position: 'relative',
+          // bottom: '-10px',
+          height: '100vh',
+          maxHeight: '500px',
+          display: 'flex',
+          justifyContent: 'flex-end',
+          flexDirection: 'column',
+          
+        }}>
           <Curves section={section} />
           <div
             style={{

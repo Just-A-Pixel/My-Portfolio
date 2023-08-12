@@ -45,9 +45,10 @@ function Curves({ section }) {
       animationData={animation}
       style={{
         maxWidth: "1500px",
-        margin: "auto",
-        marginTop: '50px',
-        // marginBottom: '10vh',
+        // margin: "auto",
+        // marginTop: '50px',
+        // marginBottom: '50px',
+        // margin: '50px 5px',
         opacity: 0.9,
         
         //   cursor: "pointer",

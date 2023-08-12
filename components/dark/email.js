@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import styles from "../../styles/Components/Dark/email.module.scss"
+
  const Email = () => {
   const form = useRef();
 
@@ -13,14 +14,16 @@ import styles from "../../styles/Components/Dark/email.module.scss"
       }, (error) => {
           console.log(error.text);
       });
+
+    form.current.reset()
   };
 
   return (
     <form ref={form} onSubmit={sendEmail} className={styles.email}>
       
-      <input type="text" name="user_name" placeholder='Name'/>
+      <input type="text" name="from_name" placeholder='Name'/>
     
-      <input type="email" name="user_email" placeholder='Email'/>
+      <input type="email" name="from_email" placeholder='Email'/>
       
       <textarea name="message" placeholder='Message'/>
       <input type="submit" value="Send" />

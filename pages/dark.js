@@ -9,6 +9,7 @@ import Image from "next/image";
 import Email from "../components/dark/email";
 import Intro from "../components/dark/intro";
 import IntroPhone from "../components/dark/introPhone"
+import Works from "../components/dark/works";
 const para = {
   p1: `Hello! I am a Software Developer I have a serious passion for UI effects, creative animations, and quality user experience. 
     Recently dived into backend and felt equally passionate for building apis and scaling applications.`,
@@ -56,8 +57,23 @@ const Dark = () => {
         }}>
           <Name />
           
-        
+          {/* {
+            {
+              'about':           
+                <IntroPhone para = {para} section = {section} a = {a} b = {b} width = {width}/>,
+              'work':
+                <Email />
+            }[section]
+          } */}
+          
+          {/* switch(section) {
+            case 'about': 
+              <IntroPhone para = {para} section = {section} a = {a} b = {b} width = {width}/>,
+            default:
+              <></>;
 
+          } */}
+          
           <IntroPhone para = {para} section = {section} a = {a} b = {b} width = {width}/>
           
         </div>
@@ -78,6 +94,14 @@ const Dark = () => {
             right: "30px"
           }}
         >
+
+          <Works />
+          <Works />
+          <Works />
+          <Works />
+          <Works />
+
+          
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -97,8 +121,6 @@ const Dark = () => {
         >
           <Email />
         </motion.div>
-
-        {/* <h6>dawdadawdwa</h6> */}
 
         <div style={{
           // overflowX: 'hidden',
@@ -124,7 +146,6 @@ const Dark = () => {
               listStyle: "none",
               position: "relative",
               top: "-50px",
-              // bottom: "100px",
               transform: `translateX(${position}vw)`,
               transition: "600ms ease-out",
             }}

@@ -14,13 +14,16 @@
     "framer-motion": "^4.1.17",
     "lottie-react": "^2.1.0",
     "next": "11.0.0",
-    "react": "17.0.2",
+    "react": "16.14.0",
     "react-dom": "17.0.2",
     "sass": "^1.43.4",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "eslint": "7.28.0",
-    "eslint-config-next": "11.0.0"
+    "eslint-config-next": "11.0.0",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
   }
 }

@@ -47,6 +47,7 @@ const About = () => {
             variants={leftAnimation}
             initial="initial"
             animate={change ? "exitanimate2" : "animate2"}
+            style={{margin: "50px 0"}}
           >
             AM A
           </motion.h1>
@@ -57,7 +58,7 @@ const About = () => {
             initial="initial"
             animate={change ? "exitanimate3" : "animate3"}
           >
-            STUDENT
+            DEVELOPER
           </motion.h1>
         </motion.div>
 
@@ -73,7 +74,7 @@ const About = () => {
               initial = {{y:0}}
               animate={change ? { opacity: 0, y: -100 } : {y:0}}
             >
-              AND
+              AND I
             </motion.h1>
             <motion.h1
               className={styles.rightText}
@@ -81,7 +82,7 @@ const About = () => {
               animate={change ? { opacity: 0, y: -100 } : {y:0}}
               transition={{ delay: 0.2 }}
             >
-              A{" "}
+              AM{" "}
             </motion.h1>
             <motion.h1
               className={styles.rightText}
@@ -89,7 +90,7 @@ const About = () => {
               animate={change ? { opacity: 0, y: -100 } : {y:0}}
               transition={{ delay: 0.4 }}
             >
-              DEVELOPER
+              FROM INDIA
             </motion.h1>
 
             <div

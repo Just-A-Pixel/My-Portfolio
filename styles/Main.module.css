@@ -1,13 +1,16 @@
 .main{
-  overflow-y: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+
 }
 .about {
   display: flex;
   justify-content: space-around;
-  height: 2000px;
+  /* height: 2000px; */
   background-color: #f9f9f9;
   width: 100vw;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .icons{
@@ -126,7 +129,7 @@
     /* margin-bottom: 200px; */
     /* height: inherit; */
     overflow-y: scroll; /* This scroll works */
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
   }
   .main{
@@ -164,10 +167,10 @@
     background-size: 150%;
     transition: 1500ms;
     transition-delay: 1s;
-    width: 100%;
+    width: 100%; 
     margin-right: 0;
     /* height: 150%; */
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     /* margin-bottom: 100px; */
     /* height: 500px; */
     /* display: flex;

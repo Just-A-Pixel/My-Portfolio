@@ -11,7 +11,9 @@ import styles from "../../styles/Components/Dark/email.module.scss"
     emailjs.sendForm('service_8wag5jh', 'template_8ramzv7', form.current, 'user_DirK7HwvsInFKJ912qz6a')
       .then((result) => {
           console.log(result.text);
+          alert("Email succesfully sent!")
       }, (error) => {
+        alert("Failure! Email sending limit reached.")
           console.log(error.text);
       });
 
@@ -26,7 +28,7 @@ import styles from "../../styles/Components/Dark/email.module.scss"
       <input type="email" name="from_email" placeholder='Email'/>
       
       <textarea name="message" placeholder='Message'/>
-      <input type="submit" value="Send" />
+      <input type="submit" value="Send" style={{cursor:'pointer'}}/>
     </form>
   );
 };

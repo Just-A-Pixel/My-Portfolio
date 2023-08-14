@@ -85,7 +85,7 @@ const Main = () => {
               </motion.h3>
 
               <motion.h2
-                className="text-[2em] my-[50px] font-semibold"
+                className="sm:text-[2em] my-[50px] font-semibold text-[1em]"
                 initial={{ transform: "translateY(2000px)", opacity: "0" }}
                 animate={{
                   transform: "translateY(10px)",
@@ -125,16 +125,17 @@ const Main = () => {
             Engineering from VIT, Vellore.
           </motion.div>
 
-          {/* <div className="m-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-            <Projects />
-          </div> */}
-
           <motion.h2 className="m-20 text-slate-50"
              initial={{ opacity: 0, x: -100 }}
              animate={{ opacity: 1, x: 0 }}
              transition={{ duration: 1, delay: 2.8 }}
           > My Work </motion.h2>
-          <motion.div className="m-20 snap-x flex flex-nowrap min-h-[400px] pt-10 gap-4 overflow-x-scroll"
+
+          {/* <div className="m-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+            <Projects />
+          </div> */}
+
+          <motion.div className="m-20 flex flex-col flex-nowrap min-h-[400px] pt-10 gap-4 overflow-x-scroll sm:flex-col md:flex-row" 
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 3.1 }}>

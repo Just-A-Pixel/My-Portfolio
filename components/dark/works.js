@@ -24,7 +24,7 @@ const Works = () => {
             {
                 list.map(item => {
                     return (
-                        <ul>
+                        <ul key = {item.name}>
                             <li>{item.name}</li>
                             <li>{item.desc}</li>
                         </ul>

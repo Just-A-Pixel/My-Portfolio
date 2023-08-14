@@ -13,7 +13,7 @@ function Greeting({delay}) {
       >
         Hello
         <motion.div
-          style={{ display: "inline-block" }}
+          style={{ display: "inline-block", color: "#9DFAEF" }}
           initial={{ y: -500 }}
           animate={{ y: 0 }}
           transition={{ delay: delay+1.7, type: "spring", bounce: 0.5 }}

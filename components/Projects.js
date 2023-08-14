@@ -1,3 +1,4 @@
+import Image from 'next/dist/client/image'
 import React from 'react'
 
 const techs = {
@@ -36,6 +37,10 @@ const techs = {
     redis: {
         name: "Redis",
         logo: "https://img.icons8.com/?size=512&id=pHS3eRpynIRQ&format=png"
+    },
+    android: {
+        name: "Android",
+        logo: "https://img.icons8.com/?size=512&id=17836&format=png"
     }
 }
 
@@ -105,7 +110,8 @@ const Projects = () => {
             link: "",
             desc: "Android app to check how many times phone was in dire need of charge. Implements persistence.",
             tech: [
-                {...techs.java}
+                {...techs.java},
+                {...techs.android}
             ]
         }
 
@@ -130,39 +136,38 @@ const Project = ({title, desc, link, tech}) => {
     return (
         <>
             <div
-  class="block  bg-white text-center shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] opacity-50 hover:opacity-100 hover:scale-125 duration-300">
+  className="block min-w-[400px] max-h-[300px]  bg-white text-center shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] opacity-50 hover:opacity-100 hover:scale-125 duration-300">
   {/* <div
     class="border-b-2 border-neutral-100 px-6 py-3 dark:border-neutral-600 dark:text-neutral-50">
     Featured
   </div> */}
-  <div class="p-6">
+  <div className="p-6">
     <h5
-      class="mb-2 text-xl font-medium leading-tight text-neutral-800">
+      className="mb-2 text-xl font-medium leading-tight text-neutral-800">
       {title}
     </h5>
-    <p class="mb-4 text-base text-neutral-600">
+    <p className="mb-4 text-base text-neutral-600">
       {desc}
     </p>
-    <a href = {link} target = "_blank">
+    <a href = {link} target = "_blank" rel="noreferrer">
     <button
       type="button"
-      class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+      className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
       data-te-ripple-init
       data-te-ripple-color="light"
 
       >
-        
       {link.length != 0 ? "Github" : "In Progress"}
 
     </button>
       </a>
   </div>
   <div
-    class="border-t-2 border-neutral-100 px-6 py-3 flex flex-wrap justify-around">
+    className="border-t-2 border-neutral-100 px-6 py-3 flex flex-wrap justify-around">
     {tech.map(item => {
         return (
-           <div className='flex'>
-            <img height={"20"} width={"20"} src={item.logo} className='mx-1'/>
+           <div className='flex' key={item.name}>
+            <Image height={"20"} width={"20"} src={item.logo} className='mx-1'/>
             {" " + item.name + " "}
            </div> 
         )

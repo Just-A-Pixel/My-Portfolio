@@ -115,20 +115,36 @@ const Main = () => {
 
           {/* Intro */}
 
-          <div className="m-20 text-slate-50 text-3xl font-light tracking-wider leading-relaxed">
-            Hello! I am Raj Anand, a Software Engineer from India. <br />I
+          <motion.div 
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 2.5 }}
+            className="m-20 text-slate-50 text-3xl font-light tracking-wider leading-relaxed">
+            Hello! I am Raj Anand, a Software Engineer from India. Previously interned as an SDE at Amazon and Growthschool. <br />I
             graduated in 2023 with a Bachelor's in Computer Science and
             Engineering from VIT, Vellore.
-          </div>
+          </motion.div>
 
-          <div className="m-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+          {/* <div className="m-20  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
             <Projects />
-          </div>
-          <div className="m-20 border-2">dawdawdawaddw</div>
-          <div className="m-20 border-2">dawdawdawaddw</div>
-          <div className="m-20 border-2">dawdawdawaddw</div>
-          <div className="m-20 border-2">dawdawdawaddw</div>
-          <div className="m-20 border-2">dawdawdawaddw</div>
+          </div> */}
+
+          <motion.h2 className="m-20 text-slate-50"
+             initial={{ opacity: 0, x: -100 }}
+             animate={{ opacity: 1, x: 0 }}
+             transition={{ duration: 1, delay: 2.8 }}
+          > My Work </motion.h2>
+          <motion.div className="m-20 snap-x flex flex-nowrap min-h-[400px] pt-10 gap-4 overflow-x-scroll"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 3.1 }}>
+            <Projects />
+          </motion.div>
+            {/* <div className="m-20 border-2">dawdawdawaddw</div>
+            <div className="m-20 border-2">dawdawdawaddw</div>
+            <div className="m-20 border-2">dawdawdawaddw</div>
+            <div className="m-20 border-2">dawdawdawaddw</div>
+            <div className="m-20 border-2">dawdawdawaddw</div> */}
         </div>
         {/* <div  style={trigger?{textAlign: "center", position: 'absolute', width: '4000px', height: '4000px', background: '#0c0c0c' ,left: '50%', transform: 'translateX(-50%)', top: '-60vh', transition: '2000ms', borderRadius: '100%' }:{borderRadius: '100%' ,width: '0', height: '0', transition: '1000ms',background: 'black',fontSize: "50px", textAlign: "center", position: 'absolute', left: '50%', transform: 'translateX(-50%)', top: '50%' }}></div> */}
       </div>
